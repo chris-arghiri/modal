@@ -14,7 +14,16 @@ const App: FunctionComponent<AppProps> = () => {
         Modal
       </button>
       <Modal title='This is a modal' show={showModal} close={toggle}>
-        <h1 style={{ textAlign: 'center' }}>This is a modal content</h1>
+        <>
+          <div className={styles.Username}>
+            <h3>Username</h3>
+            <input type='email' placeholder='Username'></input>
+          </div>
+          <div className={styles.Password}>
+            <h3>Password</h3>
+            <input type='password' placeholder='Password'></input>
+          </div>
+        </>
       </Modal>
     </div>
   );
