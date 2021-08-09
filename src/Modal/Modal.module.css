@@ -1,0 +1,65 @@
+.Container {
+  position: fixed;
+  inset: 0; /* top:0, right:0, bottom:0, left:0 */
+  background-color: hsla(0, 0%, 0%, 0.35);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Modal {
+  width: 30vw;
+  height: auto;
+  background-color: hsl(0, 0%, 100%);
+  backdrop-filter: blur(0.5rem);
+  box-shadow: 0 0 1rem 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.Header {
+  position: relative;
+  border-bottom: 0.1rem solid hsl(0, 0%, 87%);
+}
+
+.HeaderTitle {
+  text-align: center;
+}
+
+.ButtonClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+}
+
+.Content {
+  border-bottom: 0.1rem solid hsl(0, 0%, 87%);
+  padding: 2rem 0;
+}
+
+.Footer {
+  padding: 0.5rem;
+}
+.Footer button {
+  float: right;
+}
+
+.ModalClose {
+  border-radius: 0.4rem;
+  background-color: transparent;
+  font-weight: 600;
+}
+
+.ModalClose:hover {
+  color: hsla(197, 14%, 25%, 0.8);
+}
+
+.Submit {
+  margin-right: 1rem;
+  background-color: hsl(197, 14%, 25%);
+  color: hsl(0, 0%, 100%);
+}
+
+.Submit:hover {
+  background-color: hsla(197, 14%, 25%, 0.8);
+}

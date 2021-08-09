@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FunctionComponent, useState } from 'react';
+import styles from './App.module.css';
+import Modal from './Modal';
 
-function App() {
+type AppProps = {};
+
+const App: FunctionComponent<AppProps> = () => {
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const toggle = () => setShowModal(!showModal);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+      <button className={styles.Button} onClick={() => toggle()}>
+        Modal
+      </button>
+      <Modal title='This is a modal' show={showModal} close={toggle}>
+        <h1 style={{ textAlign: 'center' }}>This is a modal content</h1>
+      </Modal>
     </div>
   );
-}
+};
 
 export default App;
